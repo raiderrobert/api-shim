@@ -4,7 +4,7 @@ A bit of boilerplate to make rest api wrappers
 
 ##  Basic Implementation with Slack
 
-The `APIBase` class is a simple implementation for interacting with API endpoints.
+The `APIBase` class is a simple implementation for interacting with API endpoints. (Slack docs: https://api.slack.com/methods/channels.history)
 
     # slack.py
     from api_shim.base import APIBase
