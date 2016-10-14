@@ -20,8 +20,7 @@ class APIBase(object):
     POST_headers = {"Content-Type": "Application/json"}
 
     def join(self, query):
-        absolute_url = '/'.join([self.url, self.endpoint, query])
-        return absolute_url
+        return '/'.join(s.strip('/') for s in [self.url, self.endpoint, query])
 
     def post(self, data, query=None, headers=None):
         query = query if query else ''
