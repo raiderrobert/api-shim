@@ -27,7 +27,7 @@ Using your new API wrapper.
 
 ##  Advanced Implementation with Slack
 
-The `APIBase` class is a simple implementation for interacting with API endpoints.
+The more advanced `API` implementation permits nested resources.
 
     # slack.py
     from api_shim import API, APIBase
@@ -60,3 +60,9 @@ The `APIBase` class is a simple implementation for interacting with API endpoint
         """
         endpoint = 'channels.list'
         
+Using your new API wrapper.
+
+    >>> import slack
+    >>> token = 'shhh-be-verwee-verwee-quiet'
+    >>> slack.Channel.ChannelHistory(token=token, channel='foo')
+    <Response [200]>
