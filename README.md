@@ -38,10 +38,14 @@ The `APIBase` class is a simple implementation for interacting with API endpoint
         args = ['token']
         
     class Channels(API):
-        resources = [ChannelsHistory, ChannelsList]
+        resources = [ChannelsHistory, ChannelsInfo, ChannelsList]
     
     class ChannelsHistory(APIBase):
         endpoint = 'channels.history'
+        args = ['channel']
+        
+    class ChannelsInfo(APIBase):
+        endpoint = 'channels.info'
         args = ['channel']
      
     class ChannelsList(APIBase):
