@@ -2,7 +2,7 @@
 A bit of boilerplate to make rest api wrappers
 
 
-##  Basic Implementation
+##  Basic Implementation with Slack
 
 The `APIBase` class is a simple implementation for interacting with API endpoints.
 
