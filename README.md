@@ -35,18 +35,18 @@ The more advanced `API` implementation permits nested resources.
     class Slack(API):
         url = 'https://slack.com/api/'
         resources = [Channels]
-        args = ['token']
+        params = ['token']
         
     class Channels(API):
         resources = [History, Info, List]
     
     class History(APIBase):
         endpoint = 'channels.history'
-        args = ['channel']
+        params = ['channel']
         
     class Info(APIBase):
         endpoint = 'channels.info'
-        args = ['channel']
+        params = ['channel']
      
     class List(APIBase):
         endpoint = 'channels.list'
