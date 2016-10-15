@@ -38,31 +38,22 @@ The more advanced `API` implementation permits nested resources.
         args = ['token']
         
     class Channels(API):
-        resources = [ChannelsHistory, ChannelsInfo, ChannelsList]
+        resources = [History, Info, List]
     
-    class ChannelsHistory(APIBase):
-        """
-        Docs: https://api.slack.com/methods/channels.history
-        """
+    class History(APIBase):
         endpoint = 'channels.history'
         args = ['channel']
         
-    class ChannelsInfo(APIBase):
-        """
-        Docs: https://api.slack.com/methods/channels.info
-        """
+    class Info(APIBase):
         endpoint = 'channels.info'
         args = ['channel']
      
-    class ChannelsList(APIBase):
-        """
-        Docs: https://api.slack.com/methods/channels.list
-        """
+    class List(APIBase):
         endpoint = 'channels.list'
         
 Using your new API wrapper.
 
     >>> import slack
     >>> token = 'shhh-be-verwee-verwee-quiet'
-    >>> slack.Channel.ChannelHistory(token=token, channel='foo')
+    >>> slack.Channels.History(token=token, channel='foo')
     <Response [200]>
